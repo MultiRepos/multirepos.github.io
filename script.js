@@ -1,6 +1,6 @@
 class GitHubPortfolio {
     constructor() {
-        this.orgName = 'github'; // Change this to your organization name
+        this.orgName = 'MultiRepos'; // Change this to your organization name
         this.repos = [];
         this.filteredRepos = [];
         this.languages = new Set();
