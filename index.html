@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Organization Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <img id="org-avatar" src="" alt="Organization Avatar" class="org-avatar">
+                <div class="header-text">
+                    <h1 id="org-name">GitHub Organization</h1>
+                    <p id="org-description" class="org-description"></p>
+                    <div class="org-stats">
+                        <span id="repo-count" class="stat"></span>
+                        <span id="member-count" class="stat"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="Search repositories...">
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="language">By Language</button>
+            </div>
+            <select id="language-filter" class="language-filter" style="display: none;">
+                <option value="all">All Languages</option>
+            </select>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Loading repositories...</p>
+        </div>
+
+        <div class="repos-grid" id="repos-grid"></div>
+
+        <div class="error-message" id="error-message" style="display: none;">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>Failed to load repositories. Please check the organization name and try again.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
